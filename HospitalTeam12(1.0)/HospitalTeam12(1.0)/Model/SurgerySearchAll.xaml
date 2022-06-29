@@ -1,0 +1,28 @@
+﻿<Window x:Class="HospitalTeam12.Model.SurgerySearchAll"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalTeam12.Model"
+        mc:Ignorable="d"
+        Title="SurgerySearchAll" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dataGridSurgery" ItemsSource="{Binding rez}" IsReadOnly="True" 
+                  SelectionMode="Single" AutoGenerateColumns="False" HorizontalAlignment="Center" 
+                  Height="313" Margin="0,47,0,0" VerticalAlignment="Top" Width="725">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Surgery ID" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Room" Binding="{Binding room.Number}" />
+                <DataGridTextColumn Header="Patient:Name" Binding="{Binding patient.user.FirstName}" />
+                <DataGridTextColumn Header="Patient:Surname" Binding="{Binding patient.user.LastName}" />
+                <DataGridTextColumn Header="Doctor:Name" Binding="{Binding doctor.user.FirstName}" />
+                <DataGridTextColumn Header="Doctor:Surname" Binding="{Binding doctor.user.LastName}" />
+                <DataGridTextColumn Header="Specialization" Binding="{Binding doctor.specialization}" />
+                <DataGridTextColumn Header="Date" Binding="{Binding date}"/>
+                <DataGridTextColumn Header="Time" Binding="{Binding time}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+    </Grid>
+</Window>

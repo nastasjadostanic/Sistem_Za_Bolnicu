@@ -1,0 +1,19 @@
+﻿<Window x:Class="HospitalTeam12.Model.HospitalGrades"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalTeam12.Model"
+        mc:Ignorable="d"
+        Title="HospitalGrades" Height="450" Width="800">
+    <Grid>
+        <ComboBox x:Name="Kindness" HorizontalAlignment="Left" Margin="490,137,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Kindness_SelectionChanged"/>
+        <ComboBox x:Name="Professionalism" HorizontalAlignment="Left" Margin="490,189,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Professionalism_SelectionChanged"/>
+        <ComboBox x:Name="General" HorizontalAlignment="Left" Margin="490,239,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="General_SelectionChanged"/>
+        <Button x:Name="Submit" Content="Submit" HorizontalAlignment="Center" Margin="0,359,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="Submit_Click"/>
+        <Label Content="Rate hospital" HorizontalAlignment="Left" Margin="349,22,0,0" VerticalAlignment="Top"/>
+        <Label Content="Kindness grade" HorizontalAlignment="Left" Margin="349,132,0,0" VerticalAlignment="Top"/>
+        <Label Content="Professionalism grade" HorizontalAlignment="Left" Margin="328,186,0,0" VerticalAlignment="Top"/>
+        <Label Content="General grade" HorizontalAlignment="Left" Margin="348,237,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

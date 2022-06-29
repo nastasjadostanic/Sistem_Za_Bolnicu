@@ -1,0 +1,18 @@
+﻿<Page x:Class="HospitalTeam12.Model.InstructionPageWpfPAGE"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HospitalTeam12.Model"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="InstructionPageWpfPAGE">
+
+    <Grid>
+        <ComboBox Name="Ins" HorizontalAlignment="Left" Margin="351,26,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Ins_SelectionChanged"/>
+        <DataGrid x:Name="dataGridExamination" ItemsSource="{Binding Path=ExamBindings}" IsReadOnly="true" Margin="27,71,20,88" SelectionChanged="DataGrid_SelectionChanged"/>
+        <Button Name="Submit" Content="Submit" Margin="359,0,0,31" VerticalAlignment="Bottom" Height="41" Click="Button_Click_Submit" HorizontalAlignment="Left" Width="97"/>
+        <Button Content="Show" HorizontalAlignment="Left" Margin="533,17,0,0" VerticalAlignment="Top" Click="Button_Click" Height="40" Width="90"/>
+
+    </Grid>
+</Page>

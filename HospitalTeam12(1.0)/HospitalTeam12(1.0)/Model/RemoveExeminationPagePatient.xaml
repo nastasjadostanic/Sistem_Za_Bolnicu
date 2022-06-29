@@ -1,0 +1,16 @@
+﻿<Window x:Class="HospitalTeam12.Model.RemoveExeminationPagePatient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalTeam12.Model"
+        mc:Ignorable="d"
+        Title="RemoveExeminationPagePatient" Height="450" Width="800">
+    <Grid>
+        <Button DataContext="{Binding ElementName=SearchExa, Path=SelectedIndex}" Content="Remove" HorizontalAlignment="Left" Margin="333,362,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="Button_Click"/>
+        <Label Name="Err" Content="" HorizontalAlignment="Left" Margin="338,200,0,0" VerticalAlignment="Top"/>
+        <DataGrid Name="SearchExa" ItemsSource="{Binding Path=ExamBindings}" IsReadOnly="true"    Margin="41,29,57,108" SelectionChanged="DataGrid_SelectionChanged"/>
+
+    </Grid>
+
+</Window>

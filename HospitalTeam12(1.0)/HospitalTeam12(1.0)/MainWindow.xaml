@@ -1,0 +1,22 @@
+﻿<Window x:Class="HospitalTeam12.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalTeam12"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Doctor" HorizontalAlignment="Center" Margin="0,66,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Click_Doctor"/>
+        <Button Content="Manager" HorizontalAlignment="Center" Margin="0,125,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Click_Manager"/>
+        <Button Content="Secretary" HorizontalAlignment="Center" Margin="0,181,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Click_Secretar"/>
+        <Button Content="Patient" HorizontalAlignment="Center" Margin="0,239,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Click_Patient"/>
+
+
+    </Grid>
+</Window>

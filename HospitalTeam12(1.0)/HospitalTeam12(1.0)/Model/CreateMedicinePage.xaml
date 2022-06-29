@@ -1,0 +1,22 @@
+﻿<Window x:Class="HospitalTeam12.Model.CreateMedicinePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalTeam12.Model"
+        mc:Ignorable="d"
+        Title="CreateMedicinePage" Height="450" Width="800">
+    <Grid>
+        <Label Content="CREATE MEDICINE" HorizontalAlignment="Left" Margin="366,36,0,0" VerticalAlignment="Top"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="232,76,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="NAME" HorizontalAlignment="Left" Margin="361,83,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderThickness="3"/>
+        <Label Content="Description:" HorizontalAlignment="Left" Margin="232,125,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="DESCRIPTION" HorizontalAlignment="Left" Margin="361,128,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderThickness="3"/>
+        <Label Content="Ingredients:" HorizontalAlignment="Left" Margin="232,165,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="INGREDIENTS" HorizontalAlignment="Left" Margin="361,169,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderThickness="3"/>
+        <Label Content="Alternative medicine:" HorizontalAlignment="Left" Margin="232,206,0,0" VerticalAlignment="Top"/>
+        <Button Content="SEND TO VERIFICATION" HorizontalAlignment="Left" Margin="347,275,0,0" VerticalAlignment="Top" Height="35" Width="135" Click="Button_Click_Create"/>
+        <TextBox x:Name="ALTERNATIVE" HorizontalAlignment="Left" Margin="362,208,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderThickness="3"/>
+
+    </Grid>
+</Window>

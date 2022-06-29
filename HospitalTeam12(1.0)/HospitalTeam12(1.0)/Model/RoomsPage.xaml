@@ -1,0 +1,50 @@
+﻿<Page x:Class="HospitalTeam12.Model.RoomsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HospitalTeam12.Model"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RoomsPage">
+
+
+    <Grid  Height="350" Width="500">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" DataContext="{Binding ElementName=RoomUp,Path=SelectedItem}" Margin="-71,162,-63,42" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="218.45"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <TextBox Name="Id" Visibility="Hidden" Text="{Binding Path=Id}" Margin="86,112,1,64" Grid.Column="1"/>
+            <TextBox Name="Num" Text="{Binding Path=Number}" Margin="251,12,210,188" Grid.Column="1"/>
+            <TextBox Name="Fl" Grid.Column="1" Text="{Binding Path=Floor}" Margin="251,29,210,170"/>
+            <TextBox Name="Des" Text="{Binding Path=Description}" Margin="251,47,210,153" Grid.Column="1"/>
+            <TextBox Name="Ty" Grid.Column="1" Text="{Binding Path=RoomType}" Margin="251,64,210,136"/>
+            <Label Content="Number:" Grid.Column="1" HorizontalAlignment="Left" Margin="175,10,0,0" VerticalAlignment="Top" Height="26" Width="56"/>
+            <Label Content="Floor:" Grid.Column="1" HorizontalAlignment="Left" Margin="175,26,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.48,0.443" Height="26" Width="40"/>
+            <Label Content="Description:" Grid.Column="1" HorizontalAlignment="Left" Margin="175,42,0,0" VerticalAlignment="Top" Height="26" Width="81"/>
+            <Label Content="Type:" Grid.Column="1" HorizontalAlignment="Left" Margin="175,60,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+            <Button Content="Update" Grid.Column="1" HorizontalAlignment="Left" Margin="198,99,0,0" VerticalAlignment="Top" Height="30" Width="100" Click="Button_Click_Update"/>
+            <Button Content="Delete" Grid.Column="1" HorizontalAlignment="Left" Margin="307,100,0,0" VerticalAlignment="Top" Height="30" Width="100" Click="Button_Click_Delete"/>
+            <Button Content="Schedule renovation" Grid.Column="1" HorizontalAlignment="Left" Margin="417,101,0,0" VerticalAlignment="Top" Height="30" Width="113" Click="Button_Click_Renovation"/>
+            <Button Content="Create" Grid.Column="1" HorizontalAlignment="Left" Margin="89,100,0,0" VerticalAlignment="Top" Height="30" Width="100" Click="Button_Click_Create"/>
+
+        </Grid>
+        <DataGrid x:Name="RoomUp" ItemsSource="{Binding Rooms}" AutoGenerateColumns="True" 
+                  SelectionMode="Single" IsReadOnly="True" HorizontalAlignment="Left" 
+                  Height="106" Margin="101,30,0,0" VerticalAlignment="Top" Width="290" SelectionChanged="RoomUp_SelectionChanged"/>
+
+    </Grid>
+
+</Page>

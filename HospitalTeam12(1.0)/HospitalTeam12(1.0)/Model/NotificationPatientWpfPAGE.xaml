@@ -1,0 +1,25 @@
+﻿<Page x:Class="HospitalTeam12.Model.NotificationPatientWpfPAGE"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HospitalTeam12.Model"
+      mc:Ignorable="d" 
+      d:DesignHeight="730" d:DesignWidth="800"
+      Title="NotificationPatientWpfPAGE">
+
+    <Grid>
+        <DataGrid  x:Name="Nitify" ItemsSource="{Binding Path=Notifications}" IsReadOnly="true" Margin="85,269,85,0" SelectionChanged="Nitify_SelectionChanged" Height="190" VerticalAlignment="Top"/>
+        <DataGrid x:Name="Nitify2" ItemsSource="{Binding Path=Notifications2}" IsReadOnly="true" Margin="84,15,84,0" SelectionChanged="Nitify2_SelectionChanged" Height="224" VerticalAlignment="Top"/>
+        <Button Content="Create" HorizontalAlignment="Left" Margin="222,650,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="Create_Click"/>
+        <Button Content="Update" Margin="355,650,0,0" VerticalAlignment="Top" Height="40" HorizontalAlignment="Left" Width="90" Click="Update_Click"/>
+        <Button Content="Delete" Margin="488,650,0,0" VerticalAlignment="Top" Height="40" HorizontalAlignment="Left" Width="90" Click="Delete_Click"/>
+        <TextBox Name="Day" Margin="0,521,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Center" Width="120" Text="Day"/>
+        <TextBox Name="Mounth" Margin="0,539,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Center" Width="120" Text="Mounth"/>
+        <TextBox Name="Description" Margin="0,503,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Center" Width="120" Text="Description"/>
+        <TextBox Name="Year" Margin="0,557,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Center" Width="120" Text="Year"/>
+        <TextBox Name="Hour" Margin="0,575,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Center" Width="120" Text="Hour"/>
+        <TextBox Name="Minutes" Margin="0,593,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Center" Width="120" Text="Minutes"/>
+
+    </Grid>
+</Page>

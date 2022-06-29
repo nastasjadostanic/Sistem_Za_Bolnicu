@@ -1,0 +1,24 @@
+﻿<Window x:Class="HospitalTeam12.Model.SeperateRenovation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalTeam12.Model"
+        mc:Ignorable="d"
+        Title="SeperateRenovation" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <DataGrid x:Name="RoomUp" ItemsSource="{Binding Rooms}" AutoGenerateColumns="True" 
+                SelectionMode="Single" IsReadOnly="True"  HorizontalAlignment="Left" 
+                Height="156" Margin="245,46,0,0" VerticalAlignment="Top" Width="322" SelectionChanged="RoomUp_SelectionChanged"/>
+            <DatePicker x:Name="DateAndTime" HorizontalAlignment="Left" Margin="357,241,0,0" VerticalAlignment="Top" Height="30" Width="103"/>
+            <Label Content="Time:" HorizontalAlignment="Left" Margin="298,310,0,0" VerticalAlignment="Top"/>
+            <Button Content="Seperate" HorizontalAlignment="Left" Margin="373,366,0,0" VerticalAlignment="Top" Height="29" Width="65" Click="Button_Click_Seperate"/>
+            <ComboBox x:Name="Time" HorizontalAlignment="Left" Margin="355,311,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Time_SelectionChanged"/>
+
+
+
+        </Grid>
+
+    </Grid>
+</Window>

@@ -1,0 +1,22 @@
+﻿<Window x:Class="HospitalTeam12.Model.MergeRenovation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalTeam12.Model"
+        mc:Ignorable="d"
+        Title="MergeRenovation" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="RoomUp" ItemsSource="{Binding Rooms}" AutoGenerateColumns="True" 
+            SelectionMode="Single" IsReadOnly="True"  HorizontalAlignment="Left" 
+            Height="156" Margin="46,54,0,0" VerticalAlignment="Top" Width="322" SelectionChanged="RoomUp_SelectionChanged"/>
+        <DatePicker x:Name="DateAndTime" HorizontalAlignment="Left" Margin="354,251,0,0" VerticalAlignment="Top" Height="30" Width="103"/>
+        <Label Content="Time:" HorizontalAlignment="Left" Margin="295,320,0,0" VerticalAlignment="Top"/>
+        <Button Content="Schedule" HorizontalAlignment="Left" Margin="370,376,0,0" VerticalAlignment="Top" Height="29" Width="65" Click="Button_Click_Merge"/>
+        <ComboBox x:Name="Time" HorizontalAlignment="Left" Margin="352,321,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Time_SelectionChanged"/>
+        <DataGrid x:Name="RoomUp2" ItemsSource="{Binding Rooms}" AutoGenerateColumns="True" 
+            SelectionMode="Single" IsReadOnly="True"  HorizontalAlignment="Left" 
+            Height="156" Margin="426,55,0,0" VerticalAlignment="Top" Width="322" SelectionChanged="RoomUp_SelectionChanged2"/>
+
+    </Grid>
+</Window>

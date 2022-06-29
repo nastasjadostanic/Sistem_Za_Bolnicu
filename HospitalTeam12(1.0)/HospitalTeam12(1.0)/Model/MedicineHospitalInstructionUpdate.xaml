@@ -1,0 +1,18 @@
+﻿<Window x:Class="HospitalTeam12.Model.MedicineHospitalInstructionUpdate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalTeam12.Model"
+        mc:Ignorable="d"
+        Title="MedicineHospitalInstructionUpdate" Height="450" Width="800">
+    <Grid>
+        <Label Content="end time" HorizontalAlignment="Left" Margin="281,162,0,0" VerticalAlignment="Top"/>
+        <Button Content="Update hospital instruction" HorizontalAlignment="Left" Margin="310,235,0,0" VerticalAlignment="Top" Height="53" Width="169" Click="Button_Click"/>
+        <Label Content="ID:" HorizontalAlignment="Left" Margin="281,132,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="id" HorizontalAlignment="Center" Margin="0,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="end time" HorizontalAlignment="Left" Margin="281,162,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="DatePicker" HorizontalAlignment="Center" Margin="0,164,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

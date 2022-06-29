@@ -1,0 +1,15 @@
+﻿<Window x:Class="HospitalTeam12.Model.ReschedulePagePatient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalTeam12.Model"
+        mc:Ignorable="d"
+        Title="ReschedulePagePatient" Height="450" Width="800">
+    <Grid>
+        <DataGrid  x:Name="SearchExa" ItemsSource="{Binding Path=ExamBindings}" IsReadOnly="true"  Margin="20,16,19,256" SelectionChanged="DataGrid_SelectionChanged"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="322,363,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="Button_Click_2"/>
+        <DataGrid x:Name="ScheduleExa" ItemsSource="{Binding Path=ExamBindings2}" IsReadOnly="true" Margin="39,185,41,80"/>
+        <Button Content="Reschedule" HorizontalAlignment="Left" Margin="463,365,0,0" VerticalAlignment="Top" Height="40" Width="90" Click="Button_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,17 @@
+﻿<Page x:Class="HospitalTeam12.Model.HealthRecordWpfPAGE"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HospitalTeam12.Model"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="HealthRecordWpfPAGE">
+
+    <Grid Margin="0,0,0,-352">
+        <DataGrid Margin="0,17,0,587"  ItemsSource="{Binding Path=AnamnesisBindings}"  HorizontalAlignment="Center" Width="728" SelectionChanged="DataGrid_SelectionChanged"/>
+        <DataGrid Margin="0,215,0,389"  ItemsSource="{Binding Path=RecipesBindings}"  HorizontalAlignment="Center" Width="728" SelectionChanged="DataGrid_SelectionChanged_1"/>
+        <DataGrid Margin="0,413,0,191" ItemsSource="{Binding Path=InstructionsBindings}"  HorizontalAlignment="Center" Width="728" SelectionChanged="DataGrid_SelectionChanged_2"/>
+
+    </Grid>
+</Page>

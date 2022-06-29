@@ -1,0 +1,56 @@
+﻿<Window x:Class="HospitalTeam12.Model.AllEquipment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalTeam12.Model"
+        mc:Ignorable="d"
+        Title="AllEquipment" Height="450" Width="800">
+    <Grid>
+
+        <DataGrid x:Name="EquipmentUp" ItemsSource="{Binding Path=Equipments}" IsReadOnly="True" SelectionChanged="StaticUp_SelectionChanged" Margin="11,26,307,224"/>
+        <Grid Grid.Column="0" DataContext="{Binding ElementName=EquipmentUp,Path=SelectedItem}" Margin="0,215,0,0" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="1,11,738,3">Name:</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="2" Margin="1,1,732,142" Grid.ColumnSpan="2">Quantity:</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="3" Margin="2,39,735,104" Grid.ColumnSpan="2">Type:</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="4" Margin="2,39,735,104" Grid.ColumnSpan="2">Room:</TextBlock>
+
+            <TextBox Name="Id" Visibility="Hidden" Text="{Binding Path=Id}" Margin="86,75,1,64" Grid.Column="1" Grid.Row="2"/>
+
+            <TextBox Name="Na" Grid.Column="1" Grid.Row="1" Text="{Binding Path=Name}" Margin="84,10,0,1" />
+            <TextBox Name="Qu" Grid.Column="1" Grid.Row="1" Text="{Binding Path=Quantity}" Margin="84,28,0,141" Grid.RowSpan="2"/>
+            <TextBox Name="Ty" Grid.Column="1" Grid.Row="2" Text="{Binding Path=Type}" Margin="84,17,0,121"/>
+            <TextBox Name="Ro" Grid.Column="1" Grid.Row="2" Text="{Binding Path=Room}" Margin="84,37,0,101"/>
+
+            <Button Content="Create" Grid.Column="1" HorizontalAlignment="Left" Margin="131,116,0,0" Grid.Row="2" VerticalAlignment="Top" Height="31" Width="86" Click="Button_Click_Create"/>
+            <Button Content="Update" Grid.Column="1" HorizontalAlignment="Left" Margin="262,116,0,10" Grid.Row="2" Width="86" Click="Button_Click_Update"/>
+            <Button Content="Delete" Grid.Column="1" HorizontalAlignment="Left" Margin="380,118,0,0" Grid.Row="2" VerticalAlignment="Top" Height="31" Width="86" Click="Button_Click_Delete"/>
+            <Button Content="Reload" Grid.Column="1" HorizontalAlignment="Left" Margin="720,73,0,0" Grid.Row="2" VerticalAlignment="Top" Height="43" Width="46" Click="Button_Click_Reload"/>
+            <Button Content="Schedule moving" Grid.Column="1" HorizontalAlignment="Left" Margin="495,119,0,0" Grid.Row="2" VerticalAlignment="Top" Height="31" Width="102" Click="Button_Click_Move"/>
+            <Button Content="Deploy" Grid.Column="1" HorizontalAlignment="Left" Margin="630,119,0,0" Grid.Row="2" VerticalAlignment="Top" Height="29" Width="69" Click="Button_Click_Deploy"/>
+            <Label Content="Type:" Grid.Column="1" HorizontalAlignment="Left" Margin="-1,13,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+            <Label Content="Room:" Grid.Column="1" HorizontalAlignment="Left" Margin="-2,34,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+
+        </Grid>
+        <TextBox x:Name="InputByUser" HorizontalAlignment="Left" Margin="557,58,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="709,57,0,0" VerticalAlignment="Top" Click="Button_Click_Search"/>
+        <Label Content="Filter by room:" HorizontalAlignment="Left" Margin="529,119,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="ROOM" HorizontalAlignment="Left" Margin="514,159,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ROOM_SelectionChanged"/>
+        <Label Content="Filter by type:" HorizontalAlignment="Left" Margin="672,118,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="TYPE" HorizontalAlignment="Left" Margin="648,160,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="TYPE_SelectionChanged"/>
+        <Button Content="Filter" HorizontalAlignment="Left" Margin="692,196,0,0" VerticalAlignment="Top" Click="Button_Click_FilterT"/>
+        <Button Content="Filter" HorizontalAlignment="Left" Margin="570,195,0,0" VerticalAlignment="Top" Click="Button_Click_FilterR"/>
+
+    </Grid>
+</Window>
